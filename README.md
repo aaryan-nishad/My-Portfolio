@@ -1,4 +1,4 @@
-﻿Personal Portfolio (React + Vite)
+﻿﻿Personal Portfolio (React + Vite)
 
 This repository contains a personal portfolio website built with React and Vite. It is a lightweight, fast, and modern single-page application showcasing projects, skills, experience, and contact information.
 
