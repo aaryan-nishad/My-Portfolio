@@ -1,6 +1,111 @@
 @import "tailwindcss";
-@import "flowbite/src/themes/default";
-@source "../node_modules/flowbite";
-html{
+
+/* Design token foundation for the portfolio.
+   This file defines shared colors, typography, spacing, borders,
+   shadows, and subtle 3D support without changing the current layout.
+*/
+
+:root {
+  --bg-default: #060a17;
+  --bg-surface: rgba(12, 20, 40, 0.82);
+  --bg-surface-soft: rgba(15, 25, 50, 0.95);
+  --bg-panel: rgba(8, 14, 28, 0.96);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+  --text-soft: #e2e8f0;
+
+  --accent-primary: #4f8dff;
+  --accent-secondary: #8b5cf6;
+  --accent-tertiary: #22d3ee;
+
+  --border-default: rgba(148, 163, 184, 0.16);
+  --border-strong: rgba(71, 85, 105, 0.26);
+
+  --radius-card: 1.5rem;
+  --radius-panel: 1.75rem;
+  --radius-button: 9999px;
+
+  --shadow-sm: 0 10px 30px rgba(15, 23, 42, 0.12);
+  --shadow-md: 0 20px 60px rgba(15, 23, 42, 0.18);
+  --shadow-glow: 0 0 30px rgba(79, 120, 255, 0.18);
+
+  --transition-fast: 180ms ease;
+  --transition-standard: 220ms ease;
+  --transition-smooth: 280ms ease;
+
+  --space-section: 4rem;
+  --space-section-lg: 6rem;
+  --max-content-width: 1200px;
+
+  --font-display: 3rem;
+  --font-section: 2.25rem;
+  --font-subsection: 1.5rem;
+  --font-body: 1rem;
+  --font-support: 0.94rem;
+  --font-small: 0.82rem;
+
+  --perspective: 1200px;
+}
+
+html {
   scroll-behavior: smooth;
+}
+
+.display-heading {
+  font-size: var(--font-display);
+  line-height: 1.02;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.section-heading {
+  font-size: var(--font-section);
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.subsection-heading {
+  font-size: var(--font-subsection);
+  line-height: 1.15;
+  font-weight: 600;
+}
+
+.body-copy {
+  font-size: var(--font-body);
+  line-height: 1.7;
+}
+
+.muted-copy {
+  color: var(--text-muted);
+  font-size: var(--font-support);
+}
+
+.small-copy {
+  font-size: var(--font-small);
+}
+
+.surface-glass {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-sm);
+}
+
+.glow-surface {
+  box-shadow: var(--shadow-glow);
+}
+
+.depth-root {
+  perspective: var(--perspective);
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.smooth-transform {
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
 }

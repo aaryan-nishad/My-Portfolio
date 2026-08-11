@@ -1,4 +1,3 @@
-import './App.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Hero from './components/hero/Hero'
@@ -14,7 +13,7 @@ function App() {
     AOS.init({
       duration: 1000,
     });
-  },{});
+  },[]);
   return (
     <main className='bg-[#0d182e]'>
     <Hero/>
